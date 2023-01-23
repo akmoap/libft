@@ -6,11 +6,11 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 11:40:42 by mapter            #+#    #+#             */
-/*   Updated: 2023/01/23 11:44:08 by mapter           ###   ########.fr       */
+/*   Updated: 2023/01/23 22:44:46 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
@@ -20,6 +20,6 @@ int	isdigit(int c)
 /*#include <stdio.h>
 int	main(int argc, char *argv[])
 {
-	printf("%i", isdigit(argv[1][0]));
+	printf("%i", ft_isdigit(argv[1][0]));
 	return 0;
 }*/
