@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 11:56:27 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/14 12:29:44 by mapter           ###   ########.fr       */
+/*   Created: 2023/02/14 12:31:09 by mapter            #+#    #+#             */
+/*   Updated: 2023/02/14 12:56:14 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const char *str, int c, int n)
+char	*ft_strnstr(const char *big, const char *little, int len)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (*str && i < n)
+	while (i < len && *big)
 	{
-		if (*str == c)
+		j = 0;
+		while (big[i+j] == little[j] || !little[j])
 		{
-			return ((char *) str);
+			if (!little[j])
+				return ((char *) big);
 		}
-		str++;
 		i++;
+		big++;
 	}
 	return (0);
 }
-/*
+
 #include <stdio.h>
-#include <string.h>
-
-int main () {
-   const char str[] = "http://www.tutorialspoint.com";
-   const char ch = 'a';
-   char *ret;
-
-   ret = ft_memchr(str, ch, strlen(str));
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
+int	main()
+{
+           const char *largestring = "Foo Bar Baz";
+           const char *smallstring = "Bag";
+           char *ptr;
+	ptr = ft_strnstr(largestring, smallstring, 10);
+   printf("String after |%s| is - |%s|\n", smallstring, ptr);
 
    return(0);
-}*/
+}
