@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:31:09 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/14 12:56:14 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/15 00:13:46 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *big, const char *little, int len)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 int	main()
 {
@@ -41,4 +41,4 @@ int	main()
    printf("String after |%s| is - |%s|\n", smallstring, ptr);
 
    return(0);
-}
+}*/
