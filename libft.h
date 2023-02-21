@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 23:12:50 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/21 10:43:57 by mapter           ###   ########.fr       */
+/*   Created: 2023/02/21 11:49:50 by mapter            #+#    #+#             */
+/*   Updated: 2023/02/21 12:07:55 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#ifndef LIBFT_H_
+#define LIBFT_H_
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-/*
-#include <stdio.h>
-int main () {
-   char str[50] = "hello";
-   int len;
-
-   //strcpy(str, "This is tutorialspoint.com");
-
-   len = ft_strlen(str);
-   printf("Length of |%s| is |%d|\n", str, len);
-
-   return(0);
-}*/
+#endif
