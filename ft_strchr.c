@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:10:49 by mapter            #+#    #+#             */
-/*   Updated: 2023/01/26 12:31:15 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/21 23:06:45 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ char	*ft_strchr(const char *str, int c)
 		}
 		*str++;
 	}
+	if (*str == c)
+	{
+		return ((char *) str);
+	}
 	return (0);
 }
 /*
@@ -28,7 +32,7 @@ char	*ft_strchr(const char *str, int c)
 
 int main () {
    const char str[] = "http://www.tutorialspoint.com";
-   const char ch = 'z';
+   const char ch = '.';
    char *ret;
 
    ret = ft_strchr(str, ch);

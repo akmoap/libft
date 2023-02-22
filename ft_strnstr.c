@@ -6,11 +6,13 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:31:09 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/15 00:13:46 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/22 01:34:19 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(const char *big, const char *little, int len)
+#include <stddef.h>
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	int	i;
 	int	j;
@@ -32,10 +34,11 @@ char	*ft_strnstr(const char *big, const char *little, int len)
 }
 /*
 #include <stdio.h>
+#include <string.h>
 int	main()
 {
            const char *largestring = "Foo Bar Baz";
-           const char *smallstring = "Bag";
+           const char *smallstring = " Ba";
            char *ptr;
 	ptr = ft_strnstr(largestring, smallstring, 10);
    printf("String after |%s| is - |%s|\n", smallstring, ptr);

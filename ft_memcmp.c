@@ -6,20 +6,26 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 12:33:53 by mapter            #+#    #+#             */
-/*   Updated: 2023/01/26 12:57:21 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/21 23:50:26 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(const char *s1, const char *s2, unsigned int n)
+#include <stddef.h>
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned int	i;
+	unsigned char	*ss1;
+	unsigned char	*ss2;
 
+	ss1 = (unsigned char *) s1;
+	ss2 = (unsigned char *) s2;
 	i = 0;
 	while (i < n)
 	{
-		if (s1[i] < s2[i])
+		if (ss1[i] < ss2[i])
 			return (-1);
-		else if (s1[i] > s2[i])
+		else if (ss1[i] > ss2[i])
 			return (1);
 		i++;
 	}

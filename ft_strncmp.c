@@ -6,13 +6,15 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:52:45 by mapter            #+#    #+#             */
-/*   Updated: 2023/01/26 11:55:10 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/21 23:21:22 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include <stddef.h>
+
+int	ft_strncmp(char *s1, char *s2, size_t n)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
 	while ((s1[i] || s2[i]) && (i < n))
@@ -25,10 +27,10 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	return (0);
 }
-
-/*#include <stdio.h>
+/*
+#include <stdio.h>
 int main()
 {
-	printf("%i", ft_strncmp("hello", "healo", 7));
+	printf("%i", ft_strncmp("hello", "hezlo", 7));
 	return 0;
 }*/

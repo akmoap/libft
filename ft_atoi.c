@@ -6,11 +6,11 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 00:14:23 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/15 00:50:46 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/22 01:37:31 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	negative;

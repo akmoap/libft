@@ -6,11 +6,11 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:20:06 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/21 11:34:19 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/21 22:11:25 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

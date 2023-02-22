@@ -6,23 +6,25 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:56:27 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/14 12:29:44 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/22 01:23:23 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const char *str, int c, int n)
-{
-	int	i;
+#include <stddef.h>
 
-	i = 0;
-	while (*str && i < n)
+void	*ft_memchr(const void *str, int c, size_t n)
+{
+	unsigned char	*s;
+
+	s = (unsigned char *) str;
+	while (*s && n > 0)
 	{
-		if (*str == c)
+		if (*s == c)
 		{
-			return ((char *) str);
+			return ((void *) s);
 		}
-		str++;
-		i++;
+		s++;
+		n--;
 	}
 	return (0);
 }
@@ -32,7 +34,7 @@ void	*ft_memchr(const char *str, int c, int n)
 
 int main () {
    const char str[] = "http://www.tutorialspoint.com";
-   const char ch = 'a';
+   const char ch = 't';
    char *ret;
 
    ret = ft_memchr(str, ch, strlen(str));
