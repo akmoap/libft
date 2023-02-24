@@ -6,20 +6,20 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 22:33:43 by mapter            #+#    #+#             */
-/*   Updated: 2023/01/23 22:41:38 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/24 17:36:35 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isacii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
-
-/*#include <stdio.h>
-int	main(int argc, char *argv[])
+/*
+#include <stdio.h>
+int	main()
 {
-	printf("%i", ft_isascii(argv[1][0]));
+	printf("%i", ft_isascii('d'));
 	return 0;
 }*/

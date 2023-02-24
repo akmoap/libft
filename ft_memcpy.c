@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:52:35 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/21 22:12:18 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/24 16:43:11 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*s;
 	char	*d;
-	int		i;
+	size_t	i;
 
 	s = (char *) src;
 	d = (char *) dest;
