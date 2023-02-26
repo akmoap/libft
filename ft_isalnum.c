@@ -6,16 +6,11 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 11:48:08 by mapter            #+#    #+#             */
-/*   Updated: 2023/01/23 22:44:17 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 12:26:25 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_isupper(int c)
 {

@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 00:07:08 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/26 00:15:49 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 13:18:13 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,31 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	/*
-	char	*temp;
-
-	temp = 0;
-	ft_memcpy(temp, src, n);
-	ft_memcpy(dest, temp, n);
-	return (dest);
-	*/
 	char	*d;
 	char	*s;
+	char	*temp;
 	size_t	i;
 
 	d = (char *) dest;
 	s = (char *) src;
-	if (s < d)
+	temp = "";
+	if (d < s)
+		return (ft_memcpy(d, s, n));
+	i = 0;
+	while (i < n)
 	{
-		i = n;
-		while (i > 0)
-		{
-			d[i] = s[i];
-			i--;
-		}
+		temp[i] = s[i];
+		i++;
 	}
-	else
+	i = 0;
+	while (i < n)
 	{
-		i = 0;
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
+		d[i] = temp[i];
+		i++;
 	}
 	return (dest);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -62,4 +52,4 @@ int main () {
    printf("After memmove dest = %s, src = %s\n", dest, src);
 
    return(0);
-}
+}*/

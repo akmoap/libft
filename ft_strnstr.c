@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:31:09 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/26 03:22:16 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 11:50:16 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	lilen = ft_strlen(little);
-	while (i + lilen < len && *big)
+	if (!*little)
+		return ((char *) big);
+	while (i + lilen <= len && *big)
 	{
 		j = 0;
 		while (big[j] == little[j] || !little[j])
