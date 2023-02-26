@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>			    +#+  +:+	   +#+	      */
 /*						  +#+#+#+#+#+	+#+	      */
 /*   Created: 2023/01/25 23:10:49 by mapter	       #+#    #+#	      */
-/*   Updated: 2023/02/21 23:15:32 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 18:11:07 by mapter           ###   ########.fr       */
 /*									      */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *str, int c)
 	str = str + i;
 	while (i >= 0)
 	{
-		if (*str == c)
+		if (*str == (char) c)
 			return ((char *) str);
 		str--;
 		i--;

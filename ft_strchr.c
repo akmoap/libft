@@ -6,21 +6,24 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:10:49 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/24 12:13:03 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 18:10:06 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *str, int c)
 {
+	char	ch;
+
+	ch = (char) c;
 	while (*str)
 	{
-		if (*str == c)
+		if (*str == ch)
 		{
 			return ((char *) str);
 		}
 		str++;
 	}
-	if (*str == c)
+	if (*str == ch)
 	{
 		return ((char *) str);
 	}
