@@ -6,19 +6,22 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:31:09 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/24 12:14:40 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 03:22:16 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
+	size_t	lilen;
 
 	i = 0;
-	while (i < len && *big)
+	lilen = ft_strlen(little);
+	while (i + lilen < len && *big)
 	{
 		j = 0;
 		while (big[j] == little[j] || !little[j])

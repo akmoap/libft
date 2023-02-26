@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:52:45 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/24 12:08:07 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 03:13:57 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	ft_strncmp(char *s1, char *s2, size_t n)
 	i = 0;
 	while ((s1[i] || s2[i]) && (i < n))
 	{
-		if (s1[i] < s2[i])
-			return (-1);
-		else if (s1[i] > s2[i])
+		if ((unsigned char) s1[i] > (unsigned char)s2[i])
 			return (1);
+		else if ((unsigned char) s1[i] < (unsigned char) s2[i])
+			return (-1);
 		i++;
 	}
 	return (0);
@@ -31,6 +31,6 @@ int	ft_strncmp(char *s1, char *s2, size_t n)
 #include <stdio.h>
 int main()
 {
-	printf("%i", ft_strncmp("hello", "hezlo", 7));
+	printf("%i", ft_strncmp("test\200", "test\0", 6));
 	return 0;
 }*/

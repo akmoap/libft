@@ -6,12 +6,14 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 11:49:50 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/24 16:45:35 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 01:58:13 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+#include <stddef.h>
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);

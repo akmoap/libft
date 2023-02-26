@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 11:46:49 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/21 22:56:00 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 02:34:44 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,15 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n && src[i] != '\0')
+	if (n > 0)
 	{
-		dest[i] = src[i];
-		i++;
+		while (i < n - 1 && src[i] != '\0')
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	dest[i] = '\0';
 	return (ft_strlen(src));
 }
 /*

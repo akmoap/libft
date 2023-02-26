@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:10:07 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/22 01:56:10 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 02:40:37 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	char	*ptr;
 	int		len;
 
-	len = ft_strlen(s);
+	len = ft_strlen(s) + 1;
 	ptr = (char *) malloc(len);
 	if (!ptr)
 		return (0);
