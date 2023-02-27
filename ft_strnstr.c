@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:31:09 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/26 22:42:40 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/27 16:41:28 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,22 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	size_t	j;
+	size_t	i;
 
+	if (!str && !len)
+		return (0);
 	if (len < ft_strlen(to_find))
 		return (0);
 	len = len - ft_strlen(to_find) + 1;
 	if (!*to_find)
 		return ((char *) str);
-	while (len > 0 && *str)
+	i = 0;
+	while (i < len && str[i])
 	{
-		/*if (*str == *to_find && ft_memcmp(str, to_find, ft_strlen(to_find) == 0))
-			return ((char *) str);
-	*/
-		j = 0;
-		while (str[j] == to_find[j] || !to_find[j])
-		{
-			if (!to_find[j])
-				return ((char *) str);
-			j++;
-		}
-		str++;
-		len--;
+		if (str[i] == to_find[0])
+			if (ft_memcmp(&str[i], to_find, ft_strlen(to_find)) == 0)
+				return ((char *)(str + i));
+		i++;
 	}
 	return (0);
 }
