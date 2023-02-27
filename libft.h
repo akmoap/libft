@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 11:49:50 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/27 01:14:36 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/27 11:37:41 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ void	*ft_memchr(const void *str, int c, size_t n);
 void	*ft_calloc(size_t number, size_t size);
 //char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
