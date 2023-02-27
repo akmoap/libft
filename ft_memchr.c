@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:56:27 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/26 12:14:56 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 22:58:48 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *str, int c, size_t n)
 {
 	unsigned char	*s;
-	unsigned char   comp;
+	unsigned char	comp;
 
 	s = (unsigned char *) str;
 	comp = (unsigned char) c;

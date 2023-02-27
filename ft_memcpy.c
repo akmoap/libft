@@ -6,11 +6,11 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:52:35 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/24 16:43:11 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/26 22:58:02 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*d;
 	size_t	i;
 
+	if (!dest && !src)
+		return (0);
 	s = (char *) src;
 	d = (char *) dest;
 	i = 0;
@@ -39,6 +41,7 @@ int main () {
    printf("Before memcpy dest = %s\n", dest);
    ft_memcpy(dest, src, strlen(src)+1);
    printf("After memcpy dest = %s\n", dest);
+   ft_memcpy(((void*)0), ((void*)0), 3);
 
    return(0);
 }*/

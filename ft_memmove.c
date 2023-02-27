@@ -6,36 +6,34 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 00:07:08 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/26 13:18:13 by mapter           ###   ########.fr       */
+/*   Updated: 2023/02/27 00:09:30 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*d;
 	char	*s;
-	char	*temp;
-	size_t	i;
+	char	*lasts;
+	char	*lastd;
 
+	if (!dest && !src)
+		return (0);
 	d = (char *) dest;
 	s = (char *) src;
-	temp = "";
 	if (d < s)
-		return (ft_memcpy(d, s, n));
-	i = 0;
-	while (i < n)
 	{
-		temp[i] = s[i];
-		i++;
+		while (n--)
+			*d++ = *s++;
 	}
-	i = 0;
-	while (i < n)
+	else
 	{
-		d[i] = temp[i];
-		i++;
+		lasts = s + (n - 1);
+		lastd = d + (n - 1);
+		while (n--)
+			*lastd-- = *lasts--;
 	}
 	return (dest);
 }
@@ -44,11 +42,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 #include <string.h>
 
 int main () {
-   char dest[] = "oldstring";
+   char dest[] = "lorem ipsum dolor sit a";
    const char src[]  = "newstring";
 
    printf("Before memmove dest = %s, src = %s\n", dest, src);
-   ft_memmove(dest, "con\0sec\0\0te\0tur", 10);
+   ft_memmove(dest, "con\0sec\0\0te\0tur", 5);
    printf("After memmove dest = %s, src = %s\n", dest, src);
 
    return(0);
