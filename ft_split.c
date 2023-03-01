@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:54:57 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/01 01:53:56 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/01 16:39:15 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,6 @@ char	**ft_split(char const *s, char c)
 		s = s + ft_strlen(word);
 		i++;
 	}
-	list[i] = '\0';
+	list[i] = (char *) '\0';
 	return (list);
 }
