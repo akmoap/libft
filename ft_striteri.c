@@ -1,19 +1,19 @@
-/* ************************************************************************** */
+/**************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 16:56:57 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/01 17:11:20 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/01 19:12:17 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_striteri(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*str;
