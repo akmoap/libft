@@ -6,17 +6,16 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 01:05:40 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/27 02:08:40 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/02 02:11:35 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*dest;
-	unsigned int		i;
+	size_t	i;
 
 	if (len > ft_strlen(s))
 		len = ft_strlen(s);
