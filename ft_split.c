@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:54:57 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/06 03:27:38 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/06 09:32:42 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void	free_words(char	**list, int i)
 char	**ft_split(char const *s, char c)
 {	
 	char	**list;
-	char	*word;
 	int		word_count;
 	int		i;
 
@@ -71,19 +70,17 @@ char	**ft_split(char const *s, char c)
 	if (!list)
 		return (0);
 	i = 0;
-	word = "";
 	while (i < word_count)
 	{
 		while (*s == c)
 			s++;
-		word = get_word(s, c);
-		if (!word)
+		list[i] = get_word(s, c);
+		if (!list[i])
 		{
-			free_words(list, i);
+			free_words(list, i - 1);
 			return (0);
 		}
-		list[i] = word;
-		s = s + ft_strlen(word);
+		s = s + ft_strlen(list[i]);
 		i++;
 	}
 	list[i] = (char *) '\0';
