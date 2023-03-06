@@ -6,27 +6,25 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:31:09 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/27 16:41:28 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/06 02:05:43 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
-{
+{	
 	size_t	i;
 
-	if (!str && !len)
-		return (0);
-	if (len < ft_strlen(to_find))
-		return (0);
-	len = len - ft_strlen(to_find) + 1;
 	if (!*to_find)
 		return ((char *) str);
+	if ((void *) str != 0 && len < ft_strlen(to_find))
+		return (0);
+	len = len - ft_strlen(to_find) + 1;
 	i = 0;
-	while (i < len && str[i])
+	while (str[i])
 	{
-		if (str[i] == to_find[0])
+		if (str[i] == to_find[0] && i < len)
 			if (ft_memcmp(&str[i], to_find, ft_strlen(to_find)) == 0)
 				return ((char *)(str + i));
 		i++;

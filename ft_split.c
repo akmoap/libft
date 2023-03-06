@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:54:57 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/01 16:39:15 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/06 03:27:38 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,16 @@ char	*get_word(char const *s, char c)
 	return (word);
 }
 
+void	free_words(char	**list, int i)
+{
+	while (i >= 0)
+	{
+		free(list[i]);
+		i--;
+	}
+	free(list);
+}
+
 char	**ft_split(char const *s, char c)
 {	
 	char	**list;
@@ -67,6 +77,11 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		word = get_word(s, c);
+		if (!word)
+		{
+			free_words(list, i);
+			return (0);
+		}
 		list[i] = word;
 		s = s + ft_strlen(word);
 		i++;

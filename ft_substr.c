@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 01:05:40 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/02 02:11:35 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/06 03:12:06 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (len > ft_strlen(s))
 		len = ft_strlen(s);
+	if (start + len > ft_strlen(s))
+		len = ft_strlen(s) - start;
+	if (start >= ft_strlen(s))
+		len = 0;
 	dest = (char *) malloc(len + 1);
 	if (!dest)
 		return (0);
@@ -27,11 +31,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (dest);
 	i = 0;
 	while (i < start)
-	{
-		s++;
 		i++;
-	}
-	return (ft_memcpy(dest, s, len));
+	return (ft_memcpy(dest, s + i, len));
 }
 /*
 #include <stdio.h>
