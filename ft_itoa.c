@@ -6,11 +6,10 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 10:29:52 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/01 14:01:34 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/08 17:43:28 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	amount_numbers(int n)

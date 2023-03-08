@@ -6,11 +6,10 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 11:10:07 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/26 02:40:37 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/08 17:35:03 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

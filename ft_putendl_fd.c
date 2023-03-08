@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 23:47:49 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/01 23:49:16 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/08 15:48:15 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s || fd < 0)
+		return ;
 	while (*s)
 	{
 		ft_putchar_fd(*s, fd);

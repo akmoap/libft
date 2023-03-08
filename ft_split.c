@@ -6,11 +6,10 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:54:57 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/06 09:32:42 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/08 17:40:44 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	count_words(char const *s, char c)

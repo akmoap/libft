@@ -6,7 +6,7 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 01:05:40 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/06 03:12:06 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/08 16:08:08 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*dest;
 	size_t	i;
 
+	if (!s)
+		return (0);
 	if (len > ft_strlen(s))
 		len = ft_strlen(s);
 	if (start + len > ft_strlen(s))

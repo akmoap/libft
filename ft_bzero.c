@@ -6,11 +6,10 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:35:49 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/21 22:11:53 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/08 18:10:22 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
