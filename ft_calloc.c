@@ -6,10 +6,10 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 13:05:52 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/22 01:42:50 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/08 22:03:50 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+
 #include "libft.h"
 
 void	*ft_calloc(size_t number, size_t size)

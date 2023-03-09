@@ -6,13 +6,13 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 10:29:52 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/08 17:43:28 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/08 22:06:59 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	amount_numbers(int n)
+static int	amount_numbers(int n)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	amount_numbers(int n)
 	return (i);
 }
 
-char	*fill(char *str, int n, int i, int negative)
+static char	*fill(char *str, int n, int i, int negative)
 {
 	int	j;
 

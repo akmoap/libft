@@ -1,4 +1,5 @@
 CFLAGS = -Wall -Werror -Wextra
+CC = cc
 RM = rm -f
 NAME = libft.a
 .PHONY : all clean fclean re

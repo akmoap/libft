@@ -6,20 +6,20 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 11:48:08 by mapter            #+#    #+#             */
-/*   Updated: 2023/02/26 12:26:25 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/08 22:04:38 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+static int	ft_isupper(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (1);
 	return (0);
 }
 
-int	ft_islower(int c)
+static int	ft_islower(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (1);

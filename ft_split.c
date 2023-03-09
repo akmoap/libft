@@ -6,13 +6,13 @@
 /*   By: mapter <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 17:54:57 by mapter            #+#    #+#             */
-/*   Updated: 2023/03/08 17:40:44 by mapter           ###   ########.fr       */
+/*   Updated: 2023/03/08 22:23:05 by mapter           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	count;
 	int	started;
@@ -32,7 +32,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-char	*get_word(char const *s, char c)
+static char	*get_word(char const *s, char c)
 {
 	char	*word;
 	int		len;
@@ -48,7 +48,7 @@ char	*get_word(char const *s, char c)
 	return (word);
 }
 
-void	free_words(char	**list, int i)
+static void	free_words(char	**list, int i)
 {
 	while (i >= 0)
 	{
